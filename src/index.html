@@ -3,12 +3,56 @@
   <head>
     <meta charset="UTF-8" />
     <!-- PON UN FAVICON!!! -->
+    <link
+      rel="shortcut icon"
+      href="./assets/images/favicon-32x32.png"
+      type="image/x-icon"
+    />
     <link rel="icon" type="image/svg+xml" href="" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+      rel="stylesheet"
+    />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- CAMBIA EL TITLE!!! -->
-    <title>Vite Template</title>
+    <title>skilled-elearning-landing-page</title>
   </head>
   <body>
+    <footer class="header">
+      <span class="header__title">skilled</span>
+      <a class="header__button" href="#">Get Started</a>
+    </footer>
+    <div class="container">
+      <div>
+        <h2 class="container__title">Maximize skill, minimize budget</h2>
+        <p class="container__text">
+          Our modern courses across a range of in-demand skills will give you
+          the knowledge you need to live the life you want.
+        </p>
+        <a class="container__button" href="#">Get Started</a>
+      </div>
+      <picture>
+        <source
+          media="(min-width: 1024px)"
+          srcset="./assets/images/image-hero-desktop.webp"
+        />
+        <source
+          media="(min-width: 640px)"
+          srcset="./assets/images/image-hero-tablet.webp"
+        />
+        <source
+          media="(min-width: 360px)"
+          srcset="./assets/images/image-hero-mobile.webp"
+        />
+        <img
+          class="container__image"
+          src="./assets/images/image-hero-mobile.webp"
+          alt="icon-mobile"
+        />
+      </picture>
+    </div>
     <script type="module" src="./js/index.js"></script>
   </body>
 </html>

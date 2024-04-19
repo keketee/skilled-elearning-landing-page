@@ -1,0 +1,35 @@
+@use '../mixins/responsive.scss' as *;
+@use '../mixins/hover.scss' as *;
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 16px;
+  padding-inline: 16px;
+  align-items: center;
+
+  @include responsive(tablet) {
+  }
+
+  &__title {
+    font-weight: 800;
+    font-size: 28px;
+    color: var(--title);
+  }
+
+  &__button {
+    background-color: var(--title);
+    width: 140px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 28px;
+    color: var(--white);
+    border-radius: 28px;
+    text-align: center;
+    padding: 9px 24px;
+
+    @include hover {
+      background-color: #666ca3;
+    }
+  }
+}
