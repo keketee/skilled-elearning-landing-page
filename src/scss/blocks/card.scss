@@ -1,0 +1,110 @@
+@use '../mixins/responsive.scss' as *;
+@use '../mixins/hover.scss' as *;
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+
+  @include responsive(tablet) {
+    display: grid;
+    grid-template-columns: 339px 339px;
+  }
+
+  @include responsive(desktop) {
+    display: grid;
+    grid-template-columns: 339px 339px 339px;
+  }
+
+  &__special {
+    background-image: linear-gradient(#ff6f48, #f02aa6);
+    width: 343px;
+    height: 120px;
+    border-radius: 10px;
+    padding: 24px 29px 32px;
+
+    @include responsive(tablet) {
+      width: 339px;
+      height: 259px;
+      padding: 56px 21px 139px 32px;
+    }
+
+    @include responsive(desktop) {
+      width: 350px;
+      height: 322px;
+      padding: 64px 32px 138px 32px;
+    }
+  }
+
+  &__special--text {
+    margin: 0;
+    color: var(--white);
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 32px;
+
+    @include responsive(desktop) {
+      font-size: 32px;
+      line-height: 40px;
+    }
+  }
+
+  &__normal {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(255, 255, 255);
+    width: 343px;
+    height: 259px;
+    border-radius: 10px;
+    padding: 50px 29px 32px;
+    position: relative;
+
+    @include responsive(desktop) {
+      width: 350px;
+      height: 322px;
+      border-radius: 15px;
+      //   padding: 64px 32px 40px;
+    }
+  }
+
+  &__normal--image {
+    position: absolute;
+    content: '';
+    top: -20px;
+  }
+
+  &__normal--title {
+    font-weight: 800;
+    font-size: 20px;
+    color: #13183f;
+
+    @include responsive(desktop) {
+      font-size: 24px;
+    }
+  }
+  &__normal--text {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 26px;
+    color: #83869a;
+
+    @include responsive(desktop) {
+      font-size: 18px;
+    }
+  }
+
+  &__normal--final {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 28px;
+    color: #f74780;
+
+    @include responsive(desktop) {
+      margin-top: auto;
+    }
+    @include hover {
+      color: #ffa7c3;
+    }
+  }
+}

@@ -1,0 +1,79 @@
+@use '../mixins/hover.scss' as *;
+@use '../mixins/responsive.scss' as *;
+
+.footer {
+  background-color: #13183f;
+  width: 375px;
+  height: 120px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 80px;
+  padding: 36px 16px;
+
+  @include responsive(tablet) {
+    width: 768px;
+    padding: 36px 39px;
+  }
+
+  @include responsive(desktop) {
+    width: 1440px;
+    padding: 32px 165px;
+  }
+
+  &__title {
+    color: var(--white);
+    font-weight: 800;
+    font-size: 20px;
+
+    @include responsive(desktop) {
+      font-size: 36px;
+    }
+  }
+
+  &__button {
+    background-image: linear-gradient(#4851ff, #f02aa6);
+    width: 140px;
+    height: 48px;
+    border-radius: 28px;
+    text-align: center;
+    color: var(--white);
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 28px;
+    padding: 9px 24px 11px;
+    position: relative;
+
+    @include responsive(desktop) {
+      width: 167px;
+      height: 56px;
+      padding: 14px 31px;
+    }
+
+    @include responsive(desktop) {
+    }
+
+    &::after {
+      position: absolute;
+      content: '';
+      left: 0;
+      top: 0;
+      background-color: white;
+      width: 140px;
+      height: 48px;
+      border-radius: 28px;
+      opacity: 0;
+
+      @include responsive(desktop) {
+        width: 167px;
+        height: 56px;
+      }
+    }
+
+    @include hover {
+      &::after {
+        opacity: 0.5;
+      }
+    }
+  }
+}
